@@ -1,0 +1,1002 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* storing some value in variable */
+:root{
+    --font-poppins:"poppins",'sans-serif';
+};
+/* declear global class */
+.font-poppins{
+    font-family: var(--font-poppins);
+}
+
+body{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+.container-fluid{
+    width: 100%;
+}
+.container-fluid .flex{
+    display: flex;
+}
+.container-fluid nav{
+    display:flex;
+}
+.container-fluid nav ul{
+    list-style-type: none;
+}
+.container-fluid nav .btn{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.container-fluid nav .flex-growth{
+    flex-grow: 1;
+}
+.container-fluid nav ul li .nav-link{
+    color:dark;
+    font-weight: bold;
+    color:var(--font-poppins);
+    text-decoration: none;
+}
+.container-fluid nav ul li .nav-link:hover{
+    color:red;
+}
+.container-fluid nav .flex-initial .btn{
+    border:none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.container-fluid nav .flex-initial .btn-primary{
+    /* padding:.8rem 2rem; */
+    border-radius: 40px;
+    font-family: var(--font-poppins);
+    font-weight: bold;
+}
+.container-fluid nav .flex-initial .bg-gradient{
+    background:linear-gradient(to right, #ff512f,#dd2476);
+    color:white;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 50px 0px rgb(0 0 0/10%);
+}
+.container-fluid nav .flex-initial .btn-primary:hover{
+    background:linear-gradient(to right, #8e2de2,#4a00e0)
+}
+
+
+
+/* _____________________________Navbar___________________________________ */
+#nav{
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    background:#f6f6f6;
+    flex-direction: column; /*this will bring logo, navbar, button in separate line*/
+}
+#nav .collapse{
+    max-height: 0px;
+    transition: all 0.9s ease;
+    overflow-y: hidden;  /*this will hide the navigation when the device is less than medium or medium divices*/
+}
+header #nav .nav-brand a img{
+    padding: 15px 0px 0px 20px;
+}
+#nav .collapse ul{
+    flex-direction:column;
+    text-align: center;
+    padding: 0.3rem;
+}
+#nav .collapse ul li{
+    padding: 0 1.5rem;
+    line-height: 3rem;
+    font-size: 1em;
+}
+#nav .toggle-btn button{
+    font-size: 2em;
+    position:absolute;
+    color:#1A3260;
+    /* top:0; */
+    right: 0;
+    /* padding-left:280px; */
+    top:20px; 
+}
+/* nav-button must be hide for small devices */
+#nav .flex-initial ul button{
+    display:none;
+}
+/* this active class will allow that to exapnd the nav height when you click on the nav button */
+.active{
+    max-height: 60vh!important;
+}
+/* _____________________________/Navbar___________________________________ */
+
+
+/*_________________________banner Part start from here______________________________*/
+
+.banner_part{
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-image: url(../images/bgimg1.png);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    z-index: -99;
+}
+.banner_part .container{
+    width: 100%;
+    padding-left: auto;
+    padding-right: auto;
+}
+.banner_part .title{
+    height: 95vh;
+    padding-top: 5rem;
+}
+.banner_part .title .banner_title{
+    padding-left: 35px;
+    padding-top: 60px;
+}
+.banner_part .container .banner_title .d-inline{
+    display:inline-block;
+}
+.banner_part .container .banner_title .btn-primary{
+    padding:.8rem 2rem;
+    border-radius: 50px;
+    font-family: var(--font-poppins);
+    color:red;
+    font-weight: bold;
+}
+.banner_part .container .banner_title .btn-primary{
+    background:linear-gradient(to right, #8e2de2,#4a00e0);
+}
+.banner_part .container .banner_title .bg-gradient{
+    background: linear-gradient(to right, #fff7f3, #fff7f3);
+}
+.banner_part .container .banner_title .text-dark{
+    padding-top: 1rem;
+    color:#1A3260;
+    /* line-height: 1.5em; */
+    font-weight: bold;
+}
+.banner_part .container .banner_title p{
+   color:gray;
+}
+.banner_part .container .banner_title .text-dark .d-block{
+    display:block;
+}
+.banner_part .container .banner_title .py-5{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.banner_part .container .banner_title .py-5 .btn{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding:.8rem 2rem;
+    border-radius: 50px;
+    font-family: var(--font-poppins);
+    font-weight: bold;
+}
+.banner_part .container .banner_title .py-5 .bg-gradient{
+    background: linear-gradient(to right, #ff512f,#dd2476);
+    color:white;
+    box-shadow: 0px 0px 50px 0px rgb(0 0 0/10%);
+    text-decoration: none;
+}
+
+/*_________________________/banner Part start from here______________________________*/
+
+/*_____________________________Team Section________________________________________*/
+.team_section{
+    margin-top: 70px;
+}
+.team_section .container{
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-poppins);
+}
+.team_section .container span{
+   color:red;
+   font-size: 25px;
+   font-family: var(--font-poppins);
+}
+.team_section .container .title_area h1{
+    font-size: 2.2rem;
+    line-height: 3rem;
+    color:#1A3260
+}
+.team_section .container .grid{
+    display:grid;
+    grid-template-columns: repeat(1,minmax(0,1fr));
+    padding-top:3.5rem;
+    padding-bottom: 3.5rem;
+}
+.team_section .container .grid i{
+    color:red;
+    font-size: 35px;
+}
+.team_section .container .grid .text-center{
+    text-align: center;
+}
+.team_section .container .grid .grid-item .grid-body{
+    text-align: center;
+}
+.team_section .container .grid .grid-item .grid-body h4{
+    font-size: 1.5rem;
+    padding-top: 20px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.team_section .container .grid .grid-item .grid-body p{
+    color:gray;
+    margin:0px;
+    padding-top: 10px;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    font-family: var(--font-poppins);
+    font-size: 15px;
+}
+/*_____________________________/Team Section________________________________________*/
+
+/*_____________________________Digital Life Part________________________________________*/
+
+.digital_life_part{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.digital_life_part .grid{
+    display:grid;
+    grid-template-columns: repeat(1,minmax(0,1fr));
+    /* text-align: center; */
+    column-gap: 2em; 
+}
+.digital_life_part .grid .digital_life_part_images{
+    display: grid;
+    grid-template-columns: repeat(16,minmax(10px,1fr));
+    grid-template-rows: repeat(8,minmax(100px,1fr)); /* 8row with 100px and 1fr for maximum*/
+}
+.digital_life_part .grid .digital_life_part_images .image-1{
+    background: gray;
+    grid-column-start: 2; /*start from first col*/
+    grid-column-end: 8; /*end 8 col*/
+    grid-row-start: 2; /*grid height start from row2*/
+    grid-row-end: 5; /*grid height end at row5*/
+    background-image: url(../images/img1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    filter: blur(1px);
+}
+.digital_life_part .grid .digital_life_part_images .image-2{
+    margin-left: 5rem;
+    background: gray;
+    grid-column-start:8; /*start from first col*/
+    grid-column-end: 16; /*end 8 col*/
+    grid-row-start: 1; /*grid height start from row2*/
+    grid-row-end: 4; /*grid height end at row5*/
+    background-image: url(../images/img2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    filter: blur(1px);
+}
+
+.digital_life_part .grid .digital_life_part_images .image-3{
+   grid-area: 3/4/8/14; /* 3 show that grid start from 3 row and end at 4 row and 8 show that grid start from 8 col and end at 14 col */
+   background-image: url(../images/img3.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   border-radius: 8px;
+   z-index: 1;
+}
+
+
+
+.digital_life_part .digital_life_part_title{
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+.digital_life_part .digital_life_part_title span{
+    display: inline-block;
+    color:red;
+    font-family: var(--font-poppins);
+}
+
+.digital_life_part .digital_life_part_title .btn{
+    border: none;
+    background-color:transparent;
+    cursor: pointer;
+    padding: .8rem 2rem;
+    border-radius: 50px;
+    font-family: var(--font-poppins);
+    font-weight: bold;
+}
+.digital_life_part .digital_life_part_title .bg-gradient{
+    background: linear-gradient(to right,#fff7f3, #fff7f3);
+}
+.digital_life_part .digital_life_part_title div h1{
+    color:#1A3260;
+    font-size: 2.2rem;
+    line-height: 40px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.digital_life_part .digital_life_part_title div p{
+    color:gray;
+    line-height: 30px;
+    text-align: left;
+    padding-left: 5px;
+    padding-right: 40px;
+    /* padding-top: 25px; */
+}
+.digital_life_part .digital_life_part_title .link{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.digital_life_part .digital_life_part_title .link .btn{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding:.8rem 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    font-family: var(--font-poppins);
+    box-shadow: 0px 0px 50px 0px rgb(0 0 0/10%);
+    color:white;
+}
+.digital_life_part .digital_life_part_title .link .bg-gradient{
+   background: linear-gradient(to right, #ff512f, #dd2476);
+}
+.digital_life_part .digital_life_part_title .link .bg-gradient:hover{
+    background:linear-gradient(to right, #8e2de2,#4a00e0);
+ }
+
+/*_____________________________/Digital Life part________________________________________*/
+
+
+/*_____________________________Counting Part________________________________________*/
+
+.counting_part{
+    width: 100%;
+    /* padding:7em 0; */
+    margin-left: auto;
+    margin-right: auto;
+}
+.counting_part .grid{
+    display:grid;
+    grid-template-columns: repeat(1,minmax(0,1fr));
+}
+.counting_part .grid .first-col{
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+.counting_part .grid .first-col .btn{
+    border:none;
+    background-color: transparent;
+    cursor: pointer;
+    color:red;
+    padding:.8rem 2rem;
+    border-radius: 50px;
+    font-family: var(--font-poppins);
+    font-weight: bold;
+    display:inline-block;
+}
+.counting_part .grid .first-col .bg-gradient{
+    background:linear-gradient(to right, #fff7f3,#fff7f3);
+}
+.counting_part .grid .first-col .bg-gradient:hover{
+    background: linear-gradient(to right, #ff512f, #dd2476);
+    color:white;
+}
+.counting_part .grid .first-col .font-poppins h1{
+    color:#1A3260;
+    font-size: 2.2rem;
+    line-height: 2.5rem;
+}
+.counting_part .grid .first-col .font-poppins p{
+    color:gray;
+    margin-left: auto;
+    margin-right: auto;
+    font-size:20px;
+}
+
+.counting_part .grid .second-col .grid-of-col2{
+    display:grid;
+    box-shadow: 0px 0px 50px 0px rgb(0 0 0/10%);
+    font-family: var(--font-poppins);
+}
+.counting_part .grid .second-col .count-box{
+    display: flex;
+    justify-content: center;
+    margin:2em 0;
+}
+.counting_part .grid .second-col .count-box .grid-of-col2{
+    display:inline-grid;
+    grid-gap: 2px;
+    border-radius: 20px;
+    background-color: light;
+}
+.counting_part .grid .second-col .count-box .grid-of-col2 div{
+    background-color: white;
+    text-align: center;
+    padding: 2em 2.5em;
+}
+.counting_part .grid .second-col .grid-of-col2 h1{
+    color:#1A3260;
+    font-size: 2.2rem;
+    line-height: 3rem;
+}
+.counting_part .grid .second-col .grid-of-col2 p{
+    color:gray;
+}
+
+/*_____________________________/Counting Part________________________________________*/
+
+/*_____________________________Card Part________________________________________*/
+
+.card_part{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top:4.5rem;
+    padding-bottom: 4.5rem;
+}
+.card_part .grid{
+    display: grid;
+    grid-template-columns: repeat(1,minmax(0,1fr));
+    padding-right: 5rem;
+    padding-left: 5rem;
+    column-gap: 4em;
+    row-gap: 2em;
+}
+.card_part .grid .cards:hover{
+    transform: translateY(20px);
+}
+.card_part .grid .bg-gradient{
+    background: linear-gradient(to right, #fff7f3, #fff7f3);
+}
+.card_part .grid .bg-gradient .card1{
+    padding:3.5rem 3rem 3.5rem 3rem;
+    text-align: center;
+}
+.card_part .grid .bg-gradient .card1 span{
+    display: block;
+    color:red;
+    font-size: 3rem;
+}
+.card_part .grid .bg-gradient .card1 h2{
+    color:#1A3260;
+}
+
+.card_part .grid .bg-gradient .card1 p{
+    padding-top: 1.5rem;
+    text-align: left!important;
+    padding-bottom: 1.5rem;
+    color:gray;
+    font-size:19px;
+}
+
+/* for card-2 */
+.card_part .grid .bg-gradient-blue{
+    background: rgb(249 243 255);
+}
+.card_part .grid .bg-gradient-blue .card1{
+    padding:3.5rem 3rem 3.5rem 3rem;
+    text-align: center;
+}
+.card_part .grid .bg-gradient-blue .card1 span{
+    display: block;
+    color:red;
+    font-size: 3rem;
+}
+.card_part .grid .bg-gradient-blue .card1 h2{
+    color:#1A3260;
+}
+
+.card_part .grid .bg-gradient-blue .card1 p{
+    padding-top: 1.5rem;
+    text-align: left!important;
+    padding-bottom: 1.5rem;
+    color:gray;
+    font-size:19px;
+}
+
+/* for third card */
+.card_part .grid .bg-gradient-red{
+    background: rgb(254 247 252);
+}
+.card_part .grid .bg-gradient-red .card1{
+    padding:3.5rem 3rem 3.5rem 3rem;
+    text-align: center;
+}
+.card_part .grid .bg-gradient-red .card1 span{
+    display: block;
+    color:red;
+    font-size: 3rem;
+}
+.card_part .grid .bg-gradient-red .card1 h2{
+    color:#1A3260;
+}
+
+.card_part .grid .bg-gradient-red .card1 p{
+    padding-top: 1.5rem;
+    text-align: left!important;
+    padding-bottom: 1.5rem;
+    color:gray;
+    font-size:19px;
+}
+
+/* for fourth card */
+.card_part .grid .bg-gradient-yellow{
+    background: rgb(255 255 246);
+}
+.card_part .grid .bg-gradient-yellow .card1{
+    padding:3.5rem 3rem 3.5rem 3rem;
+    text-align: center;
+}
+.card_part .grid .bg-gradient-yellow .card1 span{
+    display: block;
+    color:red;
+    font-size: 3rem;
+}
+.card_part .grid .bg-gradient-yellow .card1 h2{
+    color:#1A3260;
+}
+
+.card_part .grid .bg-gradient-yellow .card1 p{
+    padding-top: 1.5rem;
+    text-align: left!important;
+    padding-bottom: 1.5rem;
+    color:gray;
+    font-size:19px;
+}
+
+/* for fivth card */
+.card_part .grid .bg-gradient-purple{
+    background: rgb(246 255 255);
+}
+.card_part .grid .bg-gradient-purple .card1{
+    padding:3.5rem 3rem 3.5rem 3rem;
+    text-align: center;
+}
+.card_part .grid .bg-gradient-purple .card1 span{
+    display: block;
+    color:red;
+    font-size: 3rem;
+}
+.card_part .grid .bg-gradient-purple .card1 h2{
+    color:#1A3260;
+}
+
+.card_part .grid .bg-gradient-purple .card1 p{
+    padding-top: 1.5rem;
+    text-align: left!important;
+    padding-bottom: 1.5rem;
+    color:gray;
+    font-size:19px;
+}
+
+
+
+/*_____________________________/Card Part________________________________________*/
+
+
+
+/*_____________________________Recent Work Part____________________________________*/
+.recent_work_part{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5rem;
+}
+.recent_work_part .title{
+    text-align: center;
+}
+
+.recent_work_part .title .btn{
+    border:none;
+    background-color: transparent;
+    cursor: pointer;
+    padding:.8rem 2rem;
+    border-radius: 50px;
+    font-family: var(--font-poppins);
+    font-weight: bold;
+    box-shadow: 0px 0px 50px 0px rgb(0 0 0/10%);
+    color:red;
+}
+.recent_work_part .title .bg-gradient{
+   background: linear-gradient(to right,#fff7f3, #fff7f3);
+}
+.recent_work_part .title .bg-gradient:hover{
+    background: linear-gradient(to right, #ff512f, #dd2476);
+    color:white;
+ }
+
+.recent_work_part .title .font-poppins h1{
+    color:#1A3260;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 2.2rem;
+    line-height: 3rem;
+    text-shadow: 0px 0px 50px 0px rgb(0 0 0/10%);
+
+ }
+ .recent_work_part .recent_images h3{
+    color:#1A3260;
+ }
+ .recent_work_part .recent_images{
+    padding-left: 5rem;
+    padding-right: 4rem;
+ }
+ .recent_work_part .recent_images span{
+    color:gray;
+ }
+ .recent_work_part  .recent_images .flex_item{
+    width: 320px;
+    padding-top: 3rem;
+    margin-bottom: 50px;
+ }
+ .recent_work_part .recent_images .flex_item img{
+    border-radius: 10px;
+ }
+ .recent_work_part .recent_images .flex_item img:hover{
+    transform: scale(1.1);
+    z-index: 1;
+ }
+/*_____________________________/Recent Work Part________________________________________*/
+
+
+/*_______________________________Articles Parts__________________________________________*/
+
+.articles_part{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.articles_part .article_heading_part{
+    padding:5rem;
+    text-align: center;
+}
+.articles_part .article_heading_part span{
+    color:red;
+    font-size: 20px;
+}
+.articles_part .article_heading_part h1{
+    font-size: 2.2rem;
+    line-height: 3rem;
+    color:#1A3260;
+}
+.articles_part .article_heading_part .grid{
+    display:grid;
+    column-gap: 5rem;
+    padding-top: 5rem;
+    grid-template-columns: repeat(1,minmax(0,1fr));
+}
+.articles_part .article_heading_part .grid  .card{
+    box-shadow: 0px 0px 50px 0px rgb(0 0 0/10%);
+    border:1px solid light;
+    border-radius: 15px;
+}
+.articles_part .article_heading_part .grid .card:hover{
+    transform: scale(1.1);
+    z-index: 1;
+}
+.articles_part .article_heading_part .grid .card  .card_body{
+    padding:1.5rem;
+}
+.articles_part .article_heading_part .grid .card  span{
+    color:gray;
+}
+.articles_part .article_heading_part .grid .card  h2{
+    color:#1A3260;
+}
+.articles_part .article_heading_part .grid .card .btn{
+    border:none;
+    background-color: transparent;
+    cursor: pointer;
+    padding:3rem 2rem;
+    font-family: var(--font-poppins);
+    font-weight: bold;
+    border-radius: 0px;
+}
+.articles_part .article_heading_part .grid .card .btn a{
+    color:#1A3260;
+    text-decoration: none;
+}
+/*_______________________________/Articles Parts__________________________________________*/
+
+
+/*__________________________________Footer Part__________________________________________*/
+
+.footer_part{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5rem;
+}
+.footer_part .grid{
+        display: grid;
+        padding-left: 5rem;
+        padding-right: 5rem;
+}
+.footer_part .grid .first_col{
+    text-align: left;
+    color:gray;
+    line-height: 30px;
+}
+.footer_part .grid .first_col h3{
+    color:#1A3260;
+    padding-top: 15px;
+}
+.footer_part .grid .first_col .phone{
+    display: block;
+}
+.footer_part .grid .first_col .email{
+    color:red;
+}
+
+.footer_part .grid .second_col{
+    color:gray;
+}
+.footer_part .grid .second_col h3{
+    color:#1A3260;
+    padding-left: 31px;
+    padding-top: 5px;
+}
+.footer_part .grid .second_col ul{
+    list-style-type: none;
+} 
+/* .footer_part .grid .second_col ul .blog{
+    padding-right: 26px;
+}  */
+.footer_part .grid .second_col ul a{
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 30px;
+    color:gray;
+} 
+
+
+.footer_part .grid .third_col{
+    color:gray;
+}
+.footer_part .grid .third_col h3{
+    color:#1A3260;
+    text-align: left;
+    padding-left: 40px;
+    padding-top: 5px;
+}
+.footer_part .grid .third_col ul{
+    list-style-type: none;
+    text-align: left;
+} 
+
+.footer_part .grid .third_col ul a{
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 30px;
+    color:gray;
+} 
+.footer_part .grid .fourth_col .newsletter_input{
+    display: flex;
+}
+
+.footer_part .grid .fourth_col .newsletter_input input{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 230px;
+    margin-top: 10px;
+}
+.footer_part .grid .fourth_col .newsletter_input .btn{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 10px;
+}
+.footer_part .grid .fourth_col{
+    color:gray;
+}
+.footer_part .grid .fourth_col h3{
+    color:#1A3260;
+    text-align: left;
+}
+
+
+
+/*___________________________________/Footer Part__________________________________________*/
+
+
+/* _____________________________Media Query___________________________________ */
+/* For small devices */
+@media(max-width:575px)
+{
+    .digital_life_part .grid .digital_life_part_images .image-2{
+        margin-left:0px;
+    }
+    .counting_part .grid .first-col .font-poppins h1 {
+        font-size: 1.5rem;
+    }
+   
+     .recent_work_part .title .font-poppins h1{
+        font-size: 1.5rem;
+    
+     }
+     .recent_work_part .recent_images{
+        padding-left: 36px;
+      }
+
+}
+@media(min-width:576px){
+    .sm-text-xl{
+        font-size: 3em!important;
+    }
+    .footer_part .grid .first-col{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .banner_part .title{
+        height: 60vh;
+    }
+     .recent_work_part .recent_images{
+        grid-template-columns: repeat(2, minmax(0,1fr));
+        /* width: 100%; */
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-left: 84px;
+      }
+    
+    
+}
+
+
+/* For medium devices */
+@media(min-width:768px){
+    .digital_life_part .md-text-left{
+        text-align: left;
+    }
+    .footer_part .md-col-2{
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+    .footer_part .grid .md_text_left{
+        text-align: left;
+    }
+    .banner_part .title{
+        height: 70vh;
+    }
+    .digital_life_part .md-text-left {
+        text-align: center;
+    }
+    .digital_life_part .digital_life_part_title div p{
+        padding-left: 20px!important;
+        padding-right: 20px!important;
+        text-align: left;
+    }
+    .recent_work_part .recent_images {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-left: 0px;
+        margin-right: 0px;}
+}
+
+
+/* For Desktop Devices */
+@media(min-width:992px){
+    #nav{
+        background: transparent!important;
+    }
+    .container-fluid #nav .nav-brand img{
+        padding-top:22px;
+        padding-left: 30px;
+    }
+    #nav{
+        flex-direction: row!important;
+    }
+    #nav .toggle-btn button{
+        display:none;
+    }
+    .collapse{
+        max-height: initial!important;
+    }
+    .collapse ul{
+        flex-direction: row!important;
+    }
+    .active{
+        max-height: 100%;
+    }
+
+    #nav .flex-initial ul button{
+        display: inline-block!important;
+        margin-left: 100px;
+        margin-top: 5px;
+    }
+    .team_section .container .lg-col-3{
+        grid-template-columns:repeat(3,minmax(0,1fr));
+    }
+    .digital_life_part .lg-col-2{
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+    .counting_part .lg-col-2{
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+    .card_part .lg-col-3{
+        grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+    .articles_part .article_heading_part .lg-col-3{
+        grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+    .footer_part .lg-col-4{
+        grid-template-columns: repeat(4,minmax(0,1fr));
+    }
+
+    #nav .collapse ul{
+        font-size: 14px;
+        padding: 20rem;
+    }
+
+    #nav .flex-initial ul button {
+        margin-left: 491px!important;
+        font-size: 15px;
+        padding: 10px 25px 10px 25px;
+    }
+    .banner_part .title{
+        height: 95vh;
+    }
+    .digital_life_part .md-text-left {
+        text-align: left;
+    }
+    /* .recent_work_part .recent_images{
+        padding-left: 5rem;
+        padding-right: 5rem;
+    } */
+    
+}
+
+/* For Extra Large devices */
+@media(min-width:1200px){
+    #nav{
+        background: transparent!important;
+    }
+    #nav .flex-initial ul button{
+        display: inline-block!important;
+        margin-left: 465px;
+        margin-top: 5px;
+    }
+    .card_part .lg-col-3{
+        grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+    .articles_part .article_heading_part .lg-col-3{
+        grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+    .footer_part .lg-col-4{
+        grid-template-columns: repeat(4,minmax(0,1fr));
+    }
+    #nav .collapse ul{
+        flex-direction:column;
+        text-align: center;
+        padding: 0.3rem;
+    }
+    .banner_part .title{
+        height: 95vh;
+    }
+    .digital_life_part .md-text-left {
+        text-align: left;
+    }
+    /* .recent_work_part .recent_images{
+        padding-left: 5rem;
+        padding-right: 4rem;
+     } */
+    /* .lg-col-3{
+        grid-template-columns: repeat(3,minmax(0,1fr));
+    } */
+}
+
+/* _____________________________/Media Query___________________________________ */
